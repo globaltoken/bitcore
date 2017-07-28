@@ -1,27 +1,27 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('../');
+var gltcore = require('../');
 
 describe('Library', function() {
   it('should export primatives', function() {
-    should.exist(bitcore.crypto);
-    should.exist(bitcore.encoding);
-    should.exist(bitcore.util);
-    should.exist(bitcore.errors);
-    should.exist(bitcore.Address);
-    should.exist(bitcore.Block);
-    should.exist(bitcore.MerkleBlock);
-    should.exist(bitcore.BlockHeader);
-    should.exist(bitcore.HDPrivateKey);
-    should.exist(bitcore.HDPublicKey);
-    should.exist(bitcore.Networks);
-    should.exist(bitcore.Opcode);
-    should.exist(bitcore.PrivateKey);
-    should.exist(bitcore.PublicKey);
-    should.exist(bitcore.Script);
-    should.exist(bitcore.Transaction);
-    should.exist(bitcore.URI);
-    should.exist(bitcore.Unit);
+    should.exist(gltcore.crypto);
+    should.exist(gltcore.encoding);
+    should.exist(gltcore.util);
+    should.exist(gltcore.errors);
+    should.exist(gltcore.Address);
+    should.exist(gltcore.Block);
+    should.exist(gltcore.MerkleBlock);
+    should.exist(gltcore.BlockHeader);
+    should.exist(gltcore.HDPrivateKey);
+    should.exist(gltcore.HDPublicKey);
+    should.exist(gltcore.Networks);
+    should.exist(gltcore.Opcode);
+    should.exist(gltcore.PrivateKey);
+    should.exist(gltcore.PublicKey);
+    should.exist(gltcore.Script);
+    should.exist(gltcore.Transaction);
+    should.exist(gltcore.URI);
+    should.exist(gltcore.Unit);
   });
 });

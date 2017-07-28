@@ -1,17 +1,17 @@
 {
-  "name": "bitcore",
-  "main": "./bitcore.min.js",
+  "name": "gltcore",
+  "main": "./gltcore.min.js",
   "version": "0.13.5",
   "homepage": "http://bitcore.io",
   "authors": [
     "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your bitcoin project.",
+  "description": "A pure, powerful core for your globaltoken project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "bitcoin",
+    "globaltoken",
     "bitcore",
     "btc",
     "satoshi"

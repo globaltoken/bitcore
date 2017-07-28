@@ -3,35 +3,35 @@ set -e
 set -o pipefail
 
 # add group
-if ! getent group | grep -q "^bitcore:" ; then
-    echo "Creating system group: bitcore"
-    groupadd --system bitcore
+if ! getent group | grep -q "^gltcore:" ; then
+    echo "Creating system group: gltcore"
+    groupadd --system gltcore
 fi
 
 # add user
-if ! getent passwd | grep -q "^bitcore:"; then
-    echo "Creating bitcore system user"
-    useradd --gid "bitcore" --system -m bitcore
+if ! getent passwd | grep -q "^gltcore:"; then
+    echo "Creating gltcore system user"
+    useradd --gid "gltcore" --system -m gltcore
 fi
 
 # build nodejs addons
-cd "/usr/opt/bitcore"
+cd "/usr/opt/gltcore"
 SKIP_BITCOIN_DOWNLOAD=1 npm rebuild
 
 # setup data directory
-mkdir -p "/home/bitcore/.bitcore/data"
-chown -R bitcore:bitcore "/home/bitcore/.bitcore"
+mkdir -p "/home/gltcore/.gltcore/data"
+chown -R gltcore:gltcore "/home/gltcore/.gltcore"
 
-# start bitcore
+# start gltcore
 if hash service 2> /dev/null; then
-    service bitcore start || echo "bitcore could not be registered or started"
+    service gltcore start || echo "gltcore could not be registered or started"
 elif hash start 2> /dev/null; then
-    start bitcore || echo "bitcore could not be registered or started"
+    start gltcore || echo "gltcore could not be registered or started"
 elif hash systemctl 2> /dev/null; then
     {
-        systemctl enable "bitcore.service" && \
-            systemctl start "bitcore.service"
-    } || echo "bitcore could not be registered or started"
+        systemctl enable "gltcore.service" && \
+            systemctl start "gltcore.service"
+    } || echo "gltcore could not be registered or started"
 else
-    echo 'Your system does not appear to use upstart or systemd, so bitcore could not be started'
+    echo 'Your system does not appear to use upstart or systemd, so gltcore could not be started'
 fi

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var path = require('path');
+var gltcored = require('gltcore-node/lib/cli/bitcored');
+var servicesPath = path.resolve(__dirname, '../');
+var additionalServices = ['gltinsight-api', 'gltinsight-ui'];
+gltcored(servicesPath, additionalServices);

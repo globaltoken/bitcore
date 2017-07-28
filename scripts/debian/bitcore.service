@@ -4,15 +4,15 @@ Requires=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/usr/opt/bitcore
-ExecStart=/usr/opt/bitcore/bin/bitcored
+WorkingDirectory=/usr/opt/gltcore
+ExecStart=/usr/opt/gltcore/bin/gltcored
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=15
-User=bitcore
-ExecStartPre=/bin/mkdir -p /run/bitcore
-ExecStartPre=/bin/chown bitcore:bitcore /run/bitcore
-ExecStartPre=/bin/chmod 755 /run/bitcore
+User=gltcore
+ExecStartPre=/bin/mkdir -p /run/gltcore
+ExecStartPre=/bin/chown gltcore:gltcore /run/gltcore
+ExecStartPre=/bin/chmod 755 /run/gltcore
 PermissionsStartOnly=true
 TimeoutStopSec=300
 

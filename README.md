@@ -1,4 +1,4 @@
-Bitcore
+GltCore
 =======
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore.svg?style=flat-square)](https://www.npmjs.org/package/bitcore)
@@ -6,47 +6,47 @@ Bitcore
 
 Infrastructure to build Bitcoin and blockchain-based applications for the next generation of financial technology.
 
-**Note:** If you're looking for the Bitcore Library please see: https://github.com/bitpay/bitcore-lib
+**Note:** If you're looking for the GltCore Library please see: https://github.com/globaltoken/gltcore-lib
 
 ## Getting Started
 
 Before you begin you'll need to have Node.js v4 or v0.12 installed. There are several options for installation. One method is to use [nvm](https://github.com/creationix/nvm) to easily switch between different versions, or download directly from [Node.js](https://nodejs.org/).
 
 ```bash
-npm install -g bitcore
+npm install -g gltcore
 ```
 
 Spin up a full node and join the network:
 
 ```bash
-npm install -g bitcore
-bitcored
+npm install -g gltcore
+gltcored
 ```
 
-You can then view the Insight block explorer at the default location: `http://localhost:3001/insight`, and your configuration file will be found in your home directory at `~/.bitcore`.
+You can then view the Insight block explorer at the default location: `http://localhost:3001/insight`, and your configuration file will be found in your home directory at `~/.gltcore`.
 
 Create a transaction:
 ```js
-var bitcore = require('bitcore');
-var transaction = new bitcore.Transaction();
+var gltcore = require('gltcore');
+var transaction = new gltcore.Transaction();
 var transaction.from(unspent).to(address, amount);
 transaction.sign(privateKey);
 ```
 
 ## Applications
 
-- [Node](https://github.com/bitpay/bitcore-node) - A full node with extended capabilities using Bitcoin Core
-- [Insight API](https://github.com/bitpay/insight-api) - A blockchain explorer HTTP API
-- [Insight UI](https://github.com/bitpay/insight) - A blockchain explorer web user interface
-- [Wallet Service](https://github.com/bitpay/bitcore-wallet-service) - A multisig HD service for wallets
-- [Wallet Client](https://github.com/bitpay/bitcore-wallet-client) - A client for the wallet service
-- [CLI Wallet](https://github.com/bitpay/bitcore-wallet) - A command-line based wallet client
-- [Angular Wallet Client](https://github.com/bitpay/angular-bitcore-wallet-client) - An Angular based wallet client
-- [Copay](https://github.com/bitpay/copay) - An easy-to-use, multiplatform, multisignature, secure bitcoin wallet
+- [Node](https://github.com/globaltoken/gltcore-node) - A full node with extended capabilities using Bitcoin Core
+- [Insight API](https://github.com/globaltoken/gltinsight-api) - A blockchain explorer HTTP API
+- [Insight UI](https://github.com/globaltoken/gltinsight) - A blockchain explorer web user interface
+- [Wallet Service](https://github.com/globaltoken/gltcore-wallet-service) - A multisig HD service for wallets
+- [Wallet Client](https://github.com/globaltoken/gltcore-wallet-client) - A client for the wallet service
+- [CLI Wallet](https://github.com/globaltoken/gltcore-wallet) - A command-line based wallet client
+- [Angular Wallet Client](https://github.com/globaltoken/angular-bitcore-wallet-client) - An Angular based wallet client
+- [Copay](https://github.com/globaltoken/copay) - An easy-to-use, multiplatform, multisignature, secure bitcoin wallet
 
 ## Libraries
 
-- [Lib](https://github.com/bitpay/bitcore-lib) - All of the core Bitcoin primatives including transactions, private key management and others
+- [Lib](https://github.com/globaltoken/bitcore-lib) - All of the core Bitcoin primatives including transactions, private key management and others
 - [Payment Protocol](https://github.com/bitpay/bitcore-payment-protocol) - A protocol for communication between a merchant and customer
 - [P2P](https://github.com/bitpay/bitcore-p2p) - The peer-to-peer networking protocol
 - [Mnemonic](https://github.com/bitpay/bitcore-mnemonic) - Implements mnemonic code for generating deterministic keys
@@ -73,7 +73,7 @@ If you find a security issue, please email security@bitpay.com.
 
 Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/bitpay/bitcore/blob/master/CONTRIBUTING.md) file.
 
-This will generate files named `bitcore.js` and `bitcore.min.js`.
+This will generate files named `globaltoken.js` and `globaltoken.min.js`.
 
 You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/bitpay/bitcore/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
 
@@ -85,6 +85,6 @@ To verify signatures, use the following PGP keys:
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/g/bitcore/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.

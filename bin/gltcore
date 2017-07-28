@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var gltcore = require('gltcore-node/lib/cli/bitcore');
+var path = require('path');
+var servicesPath = path.resolve(__dirname, '../');
+var additionalServices = ['gltinsight-api', 'gltinsight-ui'];
+gltcore(servicesPath, additionalServices);
